@@ -23,7 +23,7 @@ namespace Responsive_Screen
 
         private SpriteEffects _spriteEffect;
 
-        private float speed = 0.25f;
+        private float speed = 0.27f;
 
 
         // Ctor

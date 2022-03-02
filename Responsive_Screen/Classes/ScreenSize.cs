@@ -9,6 +9,7 @@ namespace Responsive_Screen
 {
     class ScreenSize
     {
+        // Attributs
         static ScreenSize instance;
 
         private Vector2 _size;
@@ -17,6 +18,7 @@ namespace Responsive_Screen
             get => _size;
         }
 
+        // Ctor
         protected ScreenSize(Vector2 size)
         {
             this._size = size;
@@ -32,16 +34,20 @@ namespace Responsive_Screen
             return instance;
         }
 
+        // Methode
         public void Update(GameTime gameTime, GraphicsDeviceManager graphics)
         {
+            // If arrow Up or Down is press
             if (Keyboard.GetState().IsKeyDown(Keys.Up))
             {
+                // Set the windows smaller
                 graphics.PreferredBackBufferWidth = (int)Size.X;
                 graphics.PreferredBackBufferHeight = (int)Size.Y;
                 graphics.ApplyChanges();
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Down))
             {
+                // Set Windows to screen size
                 graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
                 graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
                 graphics.ApplyChanges();
