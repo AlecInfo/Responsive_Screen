@@ -66,4 +66,4 @@ In the program there is a character who can be move using the keys
 - W, A, S, D
 
 And you have commands that allow you to enlarge or shrink the size of the window
-- Arrow Up And Arrow Down
+- ⬆️ and ⬇️
