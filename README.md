@@ -3,33 +3,33 @@ Proof of concept of [13th Haunted Street](https://github.com/AlecInfo/13th_Haunt
 
 ## How to use
 
-- Implement the class `RenderTarget2D` like this.
+1. Implement the class `RenderTarget2D` like this.
 ```cs
 private RenderTarget2D _renderTarget2D;
 ```
 
-- In the `LoadContent()` methode, load the render target.
+2. In the `LoadContent()` methode, load the render target.
 ```cs
 // from 1920 by 1080
 _renderTarget2D = new RenderTarget2D(GraphicsDevice, 1920, 1080);
 ```
 
-- Now you create float varriable `scale` and in the `Draw()` methode changes the size according to the screen.
+3. Now you create float varriable `scale` and in the `Draw()` methode changes the size according to the screen.
 ```cs
 this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.Height);
 ```
 
-- Your method should look like this.
+4. Your method should look like this.
 > The first `_spriteBatch.Begin();` is for the images. And the second one is only for the render target.
 
 ```cs
         protected override void Draw(GameTime gameTime)
         {
-            this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.Height);
+            scale = 1f / ((float)_renderTarget2D.Height / GraphicsDevice.Viewport.Height);
             
             
             // First 
-            GraphicsDevice.SetRenderTarget(this._renderTarget2D);
+            GraphicsDevice.SetRenderTarget(_renderTarget2D);
             GraphicsDevice.Clear(Color.Black);
 
             _spriteBatch.Begin();
@@ -46,7 +46,7 @@ this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.
 
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(this._renderTarget2D, Vector2.Zero, null, Color.White, 0f, Vector2.Zero, this.scale, SpriteEffects.None, 0f);
+            _spriteBatch.Draw(_renderTarget2D, Vector2.Zero, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 
             _spriteBatch.End();
 
