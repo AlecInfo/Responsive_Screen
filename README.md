@@ -8,7 +8,7 @@ Proof of concept of [13th Haunted Street](https://github.com/AlecInfo/13th_Haunt
 private RenderTarget2D _renderTarget2D;
 ```
 
-2. In the `LoadContent()` methode, load the render target.
+2. In the ***LoadContent()*** methode, load the render target.
 ```cs
 protected override void LoadContent()
 {
