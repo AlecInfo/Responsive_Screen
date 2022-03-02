@@ -1,5 +1,5 @@
 # Responsive_Screen
-Proof of concept of [13th Haunted Street](https://github.com/AlecInfo/13th_Haunted_Street), which aims to experience **Screen responsive**. This concept was made in C# for [Monogame](https://www.monogame.net/). For this project we used *renderTarged2D* which is already implemented in Monogame.
+Proof of concept of [13th Haunted Street](https://github.com/AlecInfo/13th_Haunted_Street), which aims to experience **Screen responsive**. This concept was made in C# for [Monogame](https://www.monogame.net/). For this project we used ***renderTarged2D*** which is already implemented in Monogame.
 
 ## How to use
 
