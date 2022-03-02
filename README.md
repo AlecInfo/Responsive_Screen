@@ -10,8 +10,13 @@ private RenderTarget2D _renderTarget2D;
 
 2. In the `LoadContent()` methode, load the render target.
 ```cs
-// from 1920 by 1080
-_renderTarget2D = new RenderTarget2D(GraphicsDevice, 1920, 1080);
+protected override void LoadContent()
+{
+    _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+    // from 1920 by 1080
+    _renderTarget2D = new RenderTarget2D(GraphicsDevice, 1920, 1080);
+}
 ```
 
 3. Now you create float varriable `scale` and in the `Draw()` methode changes the size according to the screen.
