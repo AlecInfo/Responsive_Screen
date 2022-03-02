@@ -1,9 +1,10 @@
 # Responsive_Screen
+
 Proof of concept of [13th Haunted Street](https://github.com/AlecInfo/13th_Haunted_Street), which aims to experience **Screen responsive**. This concept was made in C# for [Monogame](https://www.monogame.net/). For this project we used ***renderTarged2D*** which is already implemented in Monogame.
 
-## How to use
+## How to use render target
 
-1. Implement the class `RenderTarget2D` like this.
+1. Implement the class ***RenderTarget2D*** like this.
 ```cs
 private RenderTarget2D _renderTarget2D;
 ```
@@ -19,7 +20,7 @@ protected override void LoadContent()
 }
 ```
 
-3. Now you create float varriable `scale` and in the `Draw()` methode changes the size according to the screen.
+3. Now you create float varriable `scale` and in the ***Draw()*** methode changes the size according to the screen.
 ```cs
 this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.Height);
 ```
@@ -58,3 +59,11 @@ this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.
             base.Draw(gameTime);
         }
 ```
+
+## Program controls
+
+In the program there is a character who can be move using the keys
+- W, A, S, D
+
+And you have commands that allow you to enlarge or shrink the size of the window
+- Arrow Up And Arrow Down
