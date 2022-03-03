@@ -20,7 +20,7 @@ protected override void LoadContent()
 }
 ```
 
-3. Now you create float varriable `scale` and in the ***Draw()*** methode changes the size according to the screen.
+3. Now you create float variable `scale` and in the ***Draw()*** methode changes the size according to the screen.
 ```cs
 this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.Height);
 ```
