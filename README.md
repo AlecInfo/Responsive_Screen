@@ -62,7 +62,7 @@ this.scale = 1f / ((float)this._renderTarget2D.Height / GraphicsDevice.Viewport.
 
 ## Program controls
 
-In the program there is a character who can be move using the keys
+In the program there is a character who can move using the keys
 - W, A, S, D
 
 And you have commands that allow you to enlarge or shrink the size of the window
